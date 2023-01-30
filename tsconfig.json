@@ -1,0 +1,33 @@
+{ //to extend npm install @tsconfig/node16 --save-dev
+    // "extends": "@tsconfig/node16/tsconfig.json",
+    // +"compilerOptions": {},
+    "compilerOptions": {
+        "rootDirs": [
+            "src",
+            "bin"
+        ],
+        "outDir": "dist",
+        "lib": [
+            "es2021"
+        ],
+        "target": "es2021",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "types": [
+            "node"
+        ],
+    },
+    "exclude": [
+        "node_modules",
+        "./**/*.spec.ts",
+        "./**/*.test.ts",
+        "./**/__tests__/*.ts"
+    ],
+    "include": [
+        "./**/*.ts"
+    ],
+    "ts-node": {
+        "esm": true
+    }
+}
